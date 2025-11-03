@@ -1,0 +1,173 @@
+/* Paleta de Cores PMPR Inspirada:
+   Azul Institucional (Marinho): #1A237E
+   Cáqui/Bege (Fundo/Serviço): #F5F5DC
+   Destaque/Ouro: #FFB300
+*/
+
+/* Reset e Fonte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Fonte moderna e legível */
+    background-color: #F5F5DC; /* Cor Cáqui/Bege claro */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilo do Cabeçalho */
+header {
+    background-color: #1A237E; /* Azul Marinho Institucional */
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    border-bottom: 5px solid #FFB300; /* Destaque Dourado */
+}
+
+header h1 {
+    margin-bottom: 20px;
+    font-size: 2.2em;
+    font-weight: 900; 
+}
+
+/* Estilo do Botão */
+#infoBtn {
+    background-color: #FFB300; /* Dourado */
+    color: #1A237E;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 50px; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#infoBtn:hover {
+    background-color: #ffe082;
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#infoBtn i {
+    margin-right: 8px;
+}
+
+/* Estilo do Container Principal */
+main#curiosidades-container {
+    flex-grow: 1;
+    padding: 30px 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative; 
+    min-height: 550px; 
+    overflow: hidden; 
+}
+
+/* Estilo das Curiosidades (Visibilidade com Animação) */
+.curiosidade-item {
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateX(100%); 
+}
+
+.curiosidade-item.active {
+    opacity: 1;
+    display: flex;
+    transform: translateX(0); 
+}
+
+.curiosidade-item h2 {
+    color: #1A237E;
+    border-bottom: 3px solid #FFB300;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.curiosidade-item i {
+    margin-right: 10px;
+    color: #FFB300; 
+}
+
+.curiosidade-item p {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    max-width: 80%;
+    text-align: center;
+}
+
+.curiosidade-item img {
+    max-width: 90%;
+    height: 250px; 
+    object-fit: cover; 
+    display: block;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 3px solid #1A237E;
+    transition: transform 0.3s;
+}
+
+.curiosidade-item img:hover {
+    transform: scale(1.02);
+}
+
+/* Estilo do Rodapé */
+footer {
+    background-color: #1A237E;
+    color: #F5F5DC;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    margin-top: auto; 
+}
+
+footer i {
+    color: #FFB300;
+}
+
+/* Media Query para Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.6em;
+    }
+    main#curiosidades-container {
+        margin: 20px 10px;
+        min-height: 400px; /* Reduzindo um pouco para telas menores */
+    }
+    .curiosidade-item {
+        padding: 10px;
+    }
+    .curiosidade-item p {
+        font-size: 1em;
+        max-width: 95%;
+    }
+    .curiosidade-item img {
+        height: 180px;
+    }
+}
