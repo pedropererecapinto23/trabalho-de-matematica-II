@@ -1,44 +1,13 @@
-// O código JavaScript permanece o mesmo do passo anterior e está pronto para 8 itens!
+function mostrarInfo(tipo) {
+  const detalhes = document.getElementById('detalhes');
 
-document.addEventListener('DOMContentLoaded', () => {
-    const infoBtn = document.getElementById('infoBtn');
-    const curiosidades = document.querySelectorAll('.curiosidade-item');
-    const totalCuriosidades = curiosidades.length;
-    let currentIndex = 0; 
-    const transitionDuration = 800; // Deve corresponder à transição do CSS (0.8s)
+  const infos = {
+    "Polícia Militar": "A Polícia Militar realiza patrulhamento preventivo e atua em emergências para garantir a segurança pública.",
+    "Polícia Civil": "A Polícia Civil investiga crimes, coleta provas e conduz inquéritos para o Ministério Público e o Judiciário.",
+    "Polícia Federal": "A Polícia Federal combate crimes de alcance nacional e internacional, como tráfico, contrabando e corrupção.",
+    "Polícia Rodoviária Federal": "A PRF fiscaliza rodovias federais, combate o tráfico e promove campanhas de segurança no trânsito."
+  };
 
-    function showNextCuriosity() {
-        const currentActive = document.querySelector('.curiosidade-item.active');
-        
-        if (currentActive) {
-            currentActive.classList.remove('active');
-            
-            setTimeout(() => {
-                
-                currentIndex = (currentIndex % totalCuriosidades);
-                
-                const nextCuriosity = curiosidades[currentIndex];
-                nextCuriosity.style.transform = 'translateX(100%)'; 
-                
-                void nextCuriosity.offsetWidth; 
-                
-                nextCuriosity.classList.add('active');
+  detalhes.textContent = infos[tipo] || "Informação não encontrada.";
+}
 
-                currentIndex++;
-
-            }, transitionDuration);
-        } else {
-            curiosidades[0].classList.add('active');
-            currentIndex = 1;
-        }
-    }
-
-    curiosidades.forEach((item, index) => {
-        if (index !== 0) {
-            item.style.opacity = 0;
-            item.style.transform = 'translateX(100%)'; 
-        }
-    });
-
-    infoBtn.addEventListener('click', showNextCuriosity);
-});

@@ -1,78 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Curiosidades da Polícia Militar do Paraná</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modalidades Policiais do Brasil</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1><i class="fas fa-flag"></i> Polícia Militar do Paraná: Curiosidades</h1>
-        <button id="infoBtn" aria-label="Mostrar Próxima Curiosidade" title="Próxima Curiosidade">
-            <i class="fas fa-hand-point-right"></i> Próxima Curiosidade
-        </button>
-    </header>
-    
-    <main id="curiosidades-container">
-        
-        <section class="curiosidade-item active" data-index="1">
-            <h2><i class="fas fa-calendar-alt"></i> Curiosidade 1: A Antiguidade</h2>
-            <p>A PMPR foi fundada em **10 de agosto de 1854** como Companhia de Força Policial, sendo uma das instituições mais antigas do Brasil.</p>
-            <img src="https://images.unsplash.com/photo-1617851536540-25a7d8f7a8f5?auto=format&fit=crop&w=700&h=400&q=80" alt="Viaturas da Polícia Militar do Paraná.">
-        </section>
-        
-        <section class="curiosidade-item" data-index="2">
-            <h2><i class="fas fa-sitemap"></i> Curiosidade 2: Número de Batalhões</h2>
-            <p>A PMPR possui atualmente dezenas de **Batalhões de Polícia Militar (BPM)** espalhados pelo estado, como o 1º BPM em Ponta Grossa e o 14º BPM em Foz do Iguaçu, garantindo a cobertura territorial.</p>
-            <img src="https://images.unsplash.com/photo-1577965882655-75e3474771f8?auto=format&fit=crop&w=700&h=400&q=80" alt="Vista aérea de Curitiba, sede do Comando Geral.">
-        </section>
-        
-        <section class="curiosidade-item" data-index="3">
-            <h2><i class="fas fa-user-friends"></i> Curiosidade 3: Efetivo Legal</h2>
-            <p>O efetivo da Polícia Militar do Paraná está legalmente fixado para atingir cerca de **23.470 policiais militares**, sendo um dos maiores efetivos do Sul do país (os números reais em serviço podem variar).</p>
-            <img src="https://images.unsplash.com/photo-1594950291753-1f19f2a03e1e?auto=format&fit=crop&w=700&h=400&q=80" alt="Grupo de policiais militares em formação.">
-        </section>
-        
-        <section class="curiosidade-item" data-index="4">
-            <h2><i class="fas fa-bullseye"></i> Curiosidade 4: Operação Nhapecani</h2>
-            <p>A PMPR realiza frequentemente grandes operações como a **"Nhapecani"** (nome em alusão ao falcão, símbolo de vigilância), que mobiliza milhares de policiais para reforçar o policiamento e cumprir mandados.</p>
-            <img src="https://images.unsplash.com/photo-1621250269151-57d54408d6d5?auto=format&fit=crop&w=700&h=400&q=80" alt="Policiais realizando uma abordagem tática.">
-        </section>
-        
-        <section class="curiosidade-item" data-index="5">
-            <h2><i class="fas fa-skull-crossbones"></i> Curiosidade 5: O BOPE Paranaense</h2>
-            <p>O **Batalhão de Operações Especiais (BOPE)** é a unidade de elite do Paraná, especializada em resgate de reféns, negociação de crises e ações de alto risco.</p>
-            <img src="https://images.unsplash.com/photo-1577965882655-75e3474771f8?auto=format&fit=crop&w=700&h=400&q=80" alt="Membros do BOPE em posição de combate.">
-        </section>
+  <header>
+    <h1>🚓 Modalidades Policiais do Brasil</h1>
+    <p>Conheça as principais forças de segurança que atuam no país</p>
+  </header>
 
-        <section class="curiosidade-item" data-index="6">
-            <h2><i class="fas fa-map-marked-alt"></i> Curiosidade 6: O BPFron</h2>
-            <p>O **Batalhão de Polícia de Fronteira (BPFron)** atua especificamente no combate ao contrabando e crime organizado nas extensas áreas de divisa do Paraná com outros países.</p>
-            <img src="https://images.unsplash.com/photo-1563200782-9a67417e997f?auto=format&fit=crop&w=700&h=400&q=80" alt="Guarnição de fronteira em área rural.">
-        </section>
-        
-        <section class="curiosidade-item" data-index="7">
-            <h2><i class="fas fa-plane-departure"></i> Curiosidade 7: Aéreo e Rodoviário</h2>
-            <p>A PMPR conta com unidades especializadas como o **Batalhão de Polícia Militar de Operações Aéreas (BPMOA)** e o **Batalhão de Polícia Rodoviária (BPRv)** para patrulhamento e resgate aéreo e terrestre.</p>
-            <img src="https://images.unsplash.com/photo-1582234393604-e3525281bb87?auto=format&fit=crop&w=700&h=400&q=80" alt="Imagem de um helicóptero da polícia.">
-        </section>
+  <main>
+    <section id="policias">
 
-        <section class="curiosidade-item" data-index="8">
-            <h2><i class="fas fa-briefcase-medical"></i> Curiosidade 8: Programas Sociais</h2>
-            <p>Um dos programas de maior impacto social é o **Programa Educacional de Resistência às Drogas e à Violência (PROERD)**, que leva orientações de prevenção às escolas do estado.</p>
-            <img src="https://images.unsplash.com/photo-1558277562-f2f4e918c5e4?auto=format&fit=crop&w=700&h=400&q=80" alt="Policial interagindo com crianças em ambiente escolar.">
-        </section>
+      <div class="card">
+        <img src="https://terraboa.pr.gov.br/wp-content/uploads/2023/05/TerraBoa-novaviatura2023_04.jpeg.jpeg" alt="Polícia Militar">
+        <h2>Polícia Militar</h2>
+        <p>Responsável pelo policiamento ostensivo e pela manutenção da ordem pública. Atua nas ruas, prevenindo crimes e garantindo a segurança da população.</p>
+        <button onclick="mostrarInfo('Polícia Militar')">Saiba mais</button>
+      </div>
 
-    </main>
-    
-    <footer>
-        <p><i class="fas fa-copyright"></i> 2024 PMPR Curiosidades | Conteúdo informativo</p>
-        <p>Em caso de emergência, ligue 190.</p>
-    </footer>
-    
-    <script src="script.js"></script>
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKdAXdg8vD9ezSDIVRevo5A4_rbQCnBaCaPA&s" alt="Polícia Civil">
+        <h2>Polícia Civil</h2>
+        <p>Responsável por investigar crimes e reunir provas para a Justiça. Atua por meio de delegacias e equipes de investigação.</p>
+        <button onclick="mostrarInfo('Polícia Civil')">Saiba mais</button>
+      </div>
+
+      <div class="card">
+        <img src="https://www.shutterstock.com/image-photo/salvador-bahia-brazil-january-26-260nw-2578261907.jpg" alt="Polícia Federal">
+        <h2>Polícia Federal</h2>
+        <p>Atua na prevenção e repressão de crimes federais, como tráfico internacional, corrupção e crimes cibernéticos.</p>
+        <button onclick="mostrarInfo('Polícia Federal')">Saiba mais</button>
+      </div>
+
+      <div class="card">
+        <img src="https://www.gov.br/prf/pt-br/noticias/estaduais/pernambuco/2023/agosto/prf-recupera-dois-carros-na-br-407-em-juazeiro/img-20230811-wa0169.jpg/@@images/3837fc9f-2515-4b62-ab47-81fce732762a.jpeg" alt="Polícia Rodoviária Federal">
+        <h2>Polícia Rodoviária Federal</h2>
+        <p>Responsável pela fiscalização e patrulhamento das rodovias federais, garantindo a segurança no trânsito e combate ao crime nas estradas.</p>
+        <button onclick="mostrarInfo('Polícia Rodoviária Federal')">Saiba mais</button>
+      </div>
+
+    </section>
+
+    <section id="info">
+      <h3>Informações adicionais:</h3>
+      <p id="detalhes">Clique em uma modalidade para saber mais.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Admirador das forças de segurança</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
